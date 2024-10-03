@@ -21,6 +21,10 @@ var CODES = []QRCode{
 		url:  "https://nmbc.tidyhq.com/public/membership_levels",
 		path: "nmbc-tidhq.jpeg",
 	},
+	{
+		url:  "https://bit.ly/3ZJP3bq",
+		path: "nmbc-votes.jpeg",
+	},
 }
 
 func create_qrcode(code QRCode) {
