@@ -25,6 +25,10 @@ var CODES = []QRCode{
 		url:  "https://bit.ly/3ZJP3bq",
 		path: "nmbc-votes.jpeg",
 	},
+	{
+		url:  "https://www.eventbrite.ca/e/nmbc-presents-murderhorn-maiden-part-the-fourth-tickets-1236792753419",
+		path: "nmbc-murderhorn-eventbrite2025.jpeg",
+	},
 }
 
 func create_qrcode(code QRCode) {
