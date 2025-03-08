@@ -13,21 +13,21 @@ type QRCode struct {
 }
 
 var CODES = []QRCode{
-	{
-		url:  "https://nanaimomountainbikeclub.com/sponsorship/",
-		path: "nmbc-sponsorship.jpeg",
-	},
-	{
-		url:  "https://nmbc.tidyhq.com/public/membership_levels",
-		path: "nmbc-tidhq.jpeg",
-	},
-	{
-		url:  "https://bit.ly/3ZJP3bq",
-		path: "nmbc-votes.jpeg",
-	},
+	// {
+	// 	url:  "https://nanaimomountainbikeclub.com/sponsorship/",
+	// 	path: "nmbc-sponsorship.jpeg",
+	// },
+	// {
+	// 	url:  "https://nmbc.tidyhq.com/public/membership_levels",
+	// 	path: "nmbc-tidhq.jpeg",
+	// },
+	// {
+	// 	url:  "https://bit.ly/3ZJP3bq",
+	// 	path: "nmbc-votes.jpeg",
+	// },
 	{
 		url:  "https://www.eventbrite.ca/e/nmbc-presents-murderhorn-maiden-part-the-fourth-tickets-1236792753419",
-		path: "nmbc-murderhorn-eventbrite2025.jpeg",
+		path: "nmbc-murderhorn-eventbrite2025.png",
 	},
 }
 
@@ -38,7 +38,7 @@ func create_qrcode(code QRCode) {
 		return
 	}
 
-	w, err := standard.New(code.path)
+	w, err := standard.New(code.path, standard.WithBgTransparent(), standard.WithBuiltinImageEncoder(standard.PNG_FORMAT))
 	if err != nil {
 		fmt.Printf("standard.New failed: %v", err)
 		return
